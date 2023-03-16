@@ -8,24 +8,21 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.dev.myapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var text1: TextView
-    private lateinit var btn1: Button
-    private lateinit var btnPhone: Button
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+//        setContentView(R.layout.activity_main)
 
-        text1 = findViewById(R.id.text1)
-        btn1 = findViewById(R.id.btn1)
-        btnPhone = findViewById(R.id.btn_phone)
-
-        text1.text = "Hello Programmer"
+        binding.textBinding.text = "Hello Programmer"
         //INTENT
         //EXPLICIT INTENT
-        btn1.setOnClickListener {
+        binding.btn1.setOnClickListener {
             //OPEN MAIN2ACTIVITY
             val intentDestination = Intent(this@MainActivity, Main2Activity::class.java)
 //            intentDestination.putExtra(Main2Activity.EXTRA_DATA, "Hello My Friend")
@@ -34,10 +31,15 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch((intentDestination))
         }
 
-        btnPhone.setOnClickListener {
+        binding.btnPhone.setOnClickListener {
             val number = "123455677"
             val intentPhone = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$number"))
             startActivity(intentPhone)
+        }
+
+        binding.btnRecycler.setOnClickListener {
+            val intentDestination = Intent(this@MainActivity, RecyclerActivity::class.java)
+            startActivity(intentDestination)
         }
 
         //IMPLICIT INTENT
