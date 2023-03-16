@@ -42,6 +42,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentDestination)
         }
 
+        binding.btnFragment.setOnClickListener {
+            val intentDestination = Intent(this@MainActivity, FragmentActivity::class.java)
+            startActivity(intentDestination)
+        }
+
         //IMPLICIT INTENT
     }
 

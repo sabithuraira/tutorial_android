@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment1">Hello blank fragment one (1)</string>
+    <string name="hello_blank_fragment2">Hello blank fragment two (2)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_dialog_fragment">Enter your name</string>
 </resources>
