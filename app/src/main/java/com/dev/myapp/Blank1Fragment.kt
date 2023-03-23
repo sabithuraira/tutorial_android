@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.dev.myapp.databinding.FragmentBlank1Binding
 
 class Blank1Fragment : Fragment() {
@@ -25,18 +26,22 @@ class Blank1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnNext.setOnClickListener {
-            val fragment2 = Blank2Fragment()
-            val bundle2 = Bundle()
-            bundle2.putString(Blank2Fragment.EXTRA_VALUE, "My Value For Fragment 2")
-            fragment2.arguments = bundle2
-
-            val mFragmentManager = parentFragmentManager
-            mFragmentManager
-                .beginTransaction().apply {
-                    replace(R.id.fragment_container, fragment2, Blank2Fragment::class.java.simpleName)
-                    addToBackStack(null)
-                    commit()
-                }
+//            val fragment2 = Blank2Fragment()
+//            val bundle2 = Bundle()
+//            bundle2.putString(Blank2Fragment.EXTRA_VALUE, "My Value For Fragment 2")
+//            fragment2.arguments = bundle2
+//
+//            val mFragmentManager = parentFragmentManager
+//            mFragmentManager
+//                .beginTransaction().apply {
+//                    replace(R.id.fragment_container, fragment2, Blank2Fragment::class.java.simpleName)
+//                    addToBackStack(null)
+//                    commit()
+//                }
+            val myStudent = Student("Alex", "98766442")
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToBlank2Fragment(myStudent)
+            )
         }
 
         binding.btnDialog.setOnClickListener {
