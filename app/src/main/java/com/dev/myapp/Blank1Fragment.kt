@@ -44,6 +44,12 @@ class Blank1Fragment : Fragment() {
             )
         }
 
+        binding.btnTodo.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToTodosFragment()
+            )
+        }
+
         binding.btnDialog.setOnClickListener {
             val mDialogFragment = MyDialogFragment()
             val mFragmentManager = childFragmentManager

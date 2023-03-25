@@ -28,6 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Call Dialog Fragment"/>
+
+        <Button
+            android:id="@+id/btn_todo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To Todo Page"/>
     </LinearLayout>
 
 </FrameLayout>

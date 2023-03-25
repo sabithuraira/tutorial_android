@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_blank1Fragment_to_blank2Fragment"
             app:destination="@id/blank2Fragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_todosFragment"
+            app:destination="@id/todosFragment" />
     </fragment>
     <fragment
         android:id="@+id/blank2Fragment"
@@ -25,5 +28,27 @@
         <argument
             android:name="my_student"
             app:argType="com.dev.myapp.Student" />
+    </fragment>
+    <fragment
+        android:id="@+id/todosFragment"
+        android:name="com.dev.myapp.fragment_api.TodosFragment"
+        android:label="fragment_todos"
+        tools:layout="@layout/fragment_todos" >
+        <action
+            android:id="@+id/action_todosFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.dev.myapp.fragment_api.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" >
+        <argument
+            android:name="data"
+            app:argType="com.dev.myapp.models.Todo"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_formFragment_to_todosFragment"
+            app:destination="@id/todosFragment" />
     </fragment>
 </navigation>
