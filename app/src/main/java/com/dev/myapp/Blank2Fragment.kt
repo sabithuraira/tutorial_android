@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.dev.myapp.databinding.FragmentBlank1Binding
 import com.dev.myapp.databinding.FragmentBlank2Binding
@@ -15,6 +17,9 @@ class Blank2Fragment : Fragment() {
     }
 
     private lateinit var binding: FragmentBlank2Binding
+//    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,6 +32,9 @@ class Blank2Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+//        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        binding.textViewmodel.text = viewModel.result.toString()
 
 //        if(arguments!=null){
 //            val label = arguments?.getString(EXTRA_VALUE)

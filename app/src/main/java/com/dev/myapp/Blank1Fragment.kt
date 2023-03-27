@@ -6,12 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.dev.myapp.databinding.FragmentBlank1Binding
 
 class Blank1Fragment : Fragment() {
 
     private lateinit var binding: FragmentBlank1Binding
+//    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by activityViewModels()
+    private lateinit var parentActivity: NavActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +30,24 @@ class Blank1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        parentActivity = requireActivity() as NavActivity
+
+        viewModel.multiply(9)
+        binding.textViewmodel.text = viewModel.result.toString()
+
+        ////OBSERVE LIVEDATA
+        viewModel.isLoading.observe(viewLifecycleOwner){
+            data -> parentActivity.setLoading(data)
+        }
+
+        binding.btnSharePreferenc.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToPreferenceFragment()
+            )
+        }
+
+        ///
         binding.btnNext.setOnClickListener {
 //            val fragment2 = Blank2Fragment()
 //            val bundle2 = Bundle()
