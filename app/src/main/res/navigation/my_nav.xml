@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_blank1Fragment_to_preferenceFragment"
             app:destination="@id/preferenceFragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_sqlTodoFragment"
+            app:destination="@id/sqlTodoFragment" />
     </fragment>
     <fragment
         android:id="@+id/blank2Fragment"
@@ -62,5 +65,27 @@
         <action
             android:id="@+id/action_preferenceFragment_to_blank1Fragment"
             app:destination="@id/blank1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sqlTodoFragment"
+        android:name="com.dev.myapp.fragment_sql.SqlTodoFragment"
+        android:label="fragment_sql_todo"
+        tools:layout="@layout/fragment_sql_todo" >
+        <action
+            android:id="@+id/action_sqlTodoFragment_to_sqlTodoFormFragment"
+            app:destination="@id/sqlTodoFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sqlTodoFormFragment"
+        android:name="com.dev.myapp.fragment_sql.SqlTodoFormFragment"
+        android:label="fragment_sql_todo_form"
+        tools:layout="@layout/fragment_sql_todo_form" >
+        <action
+            android:id="@+id/action_sqlTodoFormFragment_to_sqlTodoFragment"
+            app:destination="@id/sqlTodoFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.dev.myapp.models.SqlTodo"
+            app:nullable="true" />
     </fragment>
 </navigation>

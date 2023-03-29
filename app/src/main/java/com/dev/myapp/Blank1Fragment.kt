@@ -73,6 +73,13 @@ class Blank1Fragment : Fragment() {
             )
         }
 
+
+        binding.btnSqlLite.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToSqlTodoFragment()
+            )
+        }
+
         binding.btnDialog.setOnClickListener {
             val mDialogFragment = MyDialogFragment()
             val mFragmentManager = childFragmentManager
