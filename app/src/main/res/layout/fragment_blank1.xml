@@ -48,11 +48,22 @@
             android:layout_height="wrap_content"
             android:text="Go to Share Preference"/>
 
-
         <Button
             android:id="@+id/btn_sql_lite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go to SQL Lite"/>
+
+        <Button
+            android:id="@+id/btn_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Room"/>
+
+        <Button
+            android:id="@+id/btn_custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Custom View"/>
     </LinearLayout>
 </FrameLayout>

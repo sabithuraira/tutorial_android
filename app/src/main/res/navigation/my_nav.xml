@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_blank1Fragment_to_sqlTodoFragment"
             app:destination="@id/sqlTodoFragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_roomTodoFragment"
+            app:destination="@id/roomTodoFragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_customFragment"
+            app:destination="@id/customFragment" />
     </fragment>
     <fragment
         android:id="@+id/blank2Fragment"
@@ -88,4 +94,31 @@
             app:argType="com.dev.myapp.models.SqlTodo"
             app:nullable="true" />
     </fragment>
+    <fragment
+        android:id="@+id/roomTodoFragment"
+        android:name="com.dev.myapp.fragment_sql.RoomTodoFragment"
+        android:label="fragment_room_todo"
+        tools:layout="@layout/fragment_room_todo" >
+        <action
+            android:id="@+id/action_roomTodoFragment_to_roomTodoFormFragment"
+            app:destination="@id/roomTodoFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomTodoFormFragment"
+        android:name="com.dev.myapp.fragment_sql.RoomTodoFormFragment"
+        android:label="fragment_room_todo_form"
+        tools:layout="@layout/fragment_room_todo_form" >
+        <action
+            android:id="@+id/action_roomTodoFormFragment_to_roomTodoFragment"
+            app:destination="@id/roomTodoFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.dev.myapp.room.RoomTodo"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/customFragment"
+        android:name="com.dev.myapp.custom_view.CustomFragment"
+        android:label="fragment_custom"
+        tools:layout="@layout/fragment_custom" />
 </navigation>
