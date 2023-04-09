@@ -33,7 +33,7 @@ class Blank1Fragment : Fragment() {
 //        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         parentActivity = requireActivity() as NavActivity
 
-        viewModel.multiply(9)
+        viewModel.multiply(11)
         binding.textViewmodel.text = viewModel.result.toString()
 
         ////OBSERVE LIVEDATA
@@ -77,6 +77,18 @@ class Blank1Fragment : Fragment() {
         binding.btnSqlLite.setOnClickListener {
             view.findNavController().navigate(
                 Blank1FragmentDirections.actionBlank1FragmentToSqlTodoFragment()
+            )
+        }
+
+        binding.btnRoom.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToRoomTodoFragment()
+            )
+        }
+
+        binding.btnCustomView.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToCustomFragment()
             )
         }
 
