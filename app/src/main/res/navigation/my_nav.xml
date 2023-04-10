@@ -28,6 +28,12 @@
         <action
             android:id="@+id/action_blank1Fragment_to_customFragment"
             app:destination="@id/customFragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_animationFragment"
+            app:destination="@id/animationFragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
     </fragment>
     <fragment
         android:id="@+id/blank2Fragment"
@@ -121,4 +127,14 @@
         android:name="com.dev.myapp.custom_view.CustomFragment"
         android:label="fragment_custom"
         tools:layout="@layout/fragment_custom" />
+    <fragment
+        android:id="@+id/animationFragment"
+        android:name="com.dev.myapp.animation.AnimationFragment"
+        android:label="fragment_animation"
+        tools:layout="@layout/fragment_animation" />
+    <fragment
+        android:id="@+id/mediaFragment"
+        android:name="com.dev.myapp.media_camera.MediaFragment"
+        android:label="fragment_media"
+        tools:layout="@layout/fragment_media" />
 </navigation>

@@ -92,6 +92,19 @@ class Blank1Fragment : Fragment() {
             )
         }
 
+        binding.btnAnimation.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToAnimationFragment(),
+
+            )
+        }
+
+        binding.btnMedia.setOnClickListener {
+            view.findNavController().navigate(
+                Blank1FragmentDirections.actionBlank1FragmentToMediaFragment()
+            )
+        }
+
         binding.btnDialog.setOnClickListener {
             val mDialogFragment = MyDialogFragment()
             val mFragmentManager = childFragmentManager

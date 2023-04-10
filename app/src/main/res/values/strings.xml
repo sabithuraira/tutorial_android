@@ -15,4 +15,13 @@
     <string name="appwidget_text">Random Number</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
+
+    <string name="play">Play</string>
+
+    <string name="quit">Quit</string>
+    <string name="flappy">Flappy Bird</string>
+
+    <string name="play_soundpool">Play SoundPool</string>
+    <string name="play_mediaplayer">Play MediaPlayer</string>
+    <string name="stop_mediaplayer">Stop MediaPlayer</string>
 </resources>

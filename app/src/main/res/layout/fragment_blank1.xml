@@ -65,5 +65,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go to Custom View"/>
+
+        <Button
+            android:id="@+id/btn_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Animation"/>
+
+        <Button
+            android:id="@+id/btn_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Media and Camera"/>
     </LinearLayout>
 </FrameLayout>
