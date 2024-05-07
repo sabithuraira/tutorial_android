@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_blank1Fragment_to_mediaFragment"
             app:destination="@id/mediaFragment" />
+        <action
+            android:id="@+id/action_blank1Fragment_to_mlkitFragment"
+            app:destination="@id/mlkitFragment" />
     </fragment>
     <fragment
         android:id="@+id/blank2Fragment"
@@ -136,5 +139,19 @@
         android:id="@+id/mediaFragment"
         android:name="com.dev.myapp.media_camera.MediaFragment"
         android:label="fragment_media"
-        tools:layout="@layout/fragment_media" />
+        tools:layout="@layout/fragment_media" >
+        <action
+            android:id="@+id/action_mediaFragment_to_cameraxFragment"
+            app:destination="@id/cameraxFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraxFragment"
+        android:name="com.dev.myapp.media_camera.CameraxFragment"
+        android:label="fragment_camerax"
+        tools:layout="@layout/fragment_camerax" />
+    <fragment
+        android:id="@+id/mlkitFragment"
+        android:name="com.dev.myapp.mlkit.MlkitFragment"
+        android:label="fragment_mlkit"
+        tools:layout="@layout/fragment_mlkit" />
 </navigation>

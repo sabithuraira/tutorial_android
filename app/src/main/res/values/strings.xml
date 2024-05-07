@@ -24,4 +24,11 @@
     <string name="play_soundpool">Play SoundPool</string>
     <string name="play_mediaplayer">Play MediaPlayer</string>
     <string name="stop_mediaplayer">Stop MediaPlayer</string>
+
+    <string name="camerax">CameraX</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+
+    <string name="input_text">Input Text Here</string>
+    <string name="translate">Translate</string>
 </resources>
